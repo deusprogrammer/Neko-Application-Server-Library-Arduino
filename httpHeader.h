@@ -28,6 +28,7 @@ public:
 	void reset() {nPairs = 0;}
 	void consumeLine(char* line);
 	int getContentLength() {return contentLength;}
+	int getVerb() {return verb;}
 	//char* getHost() {return host;}
 	char* getResource() {return resource;}
 	//char* getVersion() {return "VERSION 1.0";}
