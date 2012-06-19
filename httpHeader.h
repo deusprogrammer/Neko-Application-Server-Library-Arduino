@@ -14,7 +14,7 @@
 #define POST   2 
 #define DELETE 3
 
-#define MAX_PAIRS 3
+#define MAX_PAIRS 4
 
 class HTTPHeader {
 private:
