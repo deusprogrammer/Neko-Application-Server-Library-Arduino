@@ -1,0 +1,11 @@
+HTTPHeader library for Arduino v.0.1a
+
+Current limitations:
+   +To conserve RAM, the number of query params
+   has been reduced to 4.
+   +The JSON parsing library has been removed until
+   I can find a solution with a smaller footprint.
+   +For those with an Arduino Mega or a RAM shield,
+   by all means readd any JSON parser of your choice,
+   you can collect the PUT or POST data from the
+   point marked in the example HttpArd.
