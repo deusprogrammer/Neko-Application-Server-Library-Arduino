@@ -1,5 +1,12 @@
 HTTPHeader library for Arduino v.0.2a
 
+Gotchas
+   +Make sure to include these libraries before
+      neko.h in your sketch.  This is a temporary
+      workaround.
+      +SPI.h
+      +Ethernet.h
+
 Current limitations:
    +To conserve RAM, the number of query params
       has been reduced to 4.
