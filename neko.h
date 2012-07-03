@@ -11,7 +11,13 @@
 #define NULL 0
 #endif
 
+#ifdef __AVR_ATmega2560__
 #define MAX_SERVICES 10
+#elif __AVR_ATmega1280__
+#define MAX_SERVICES 5
+#else
+#define MAX_SERVICES 3
+#endif
 
 struct WebService {
    char resourceName[32];
@@ -21,10 +27,10 @@ struct WebService {
 class ApplicationServer {
 protected:
    HTTPHeader header;
-   WebService getServices[3];
-   WebService putServices[3];
-   WebService postServices[3];
-   WebService deleteServices[3];
+   WebService getServices[MAX_SERVICES];
+   WebService putServices[MAX_SERVICES];
+   WebService postServices[MAX_SERVICES];
+   WebService deleteServices[MAX_SERVICES];
    
    bool running;
    
