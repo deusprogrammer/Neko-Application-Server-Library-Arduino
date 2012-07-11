@@ -1,5 +1,4 @@
 #include "httpHeader.h"
-#include "strutils.h"
 
 HTTPHeader::HTTPHeader() {
 	this->contentLength = 0;

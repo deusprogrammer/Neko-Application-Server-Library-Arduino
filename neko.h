@@ -34,12 +34,16 @@ protected:
    
    bool running;
    
+   int octets[4];
+   int port;
+   
    int nGetServices;
    int nPutServices;
    int nPostServices;
    int nDeleteServices;
 public:
    ApplicationServer();
+   ApplicationServer(char* ipAddress, char* port = "80");
    
    void addService(int verb, char* resourceName, void *(*funcPtr)(EthernetClient*, HTTPHeader*, void*));
    WebService* fetchService(int verb, char* resourceName);

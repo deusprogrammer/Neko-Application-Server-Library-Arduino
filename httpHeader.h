@@ -1,6 +1,7 @@
 #include "Arduino.h"
 #include "stdlib.h"
 #include "httpQuery.h"
+#include "strutils.h"
 
 #ifndef HTTPHEADER_H
 #define HTTPHEADER_H
@@ -14,7 +15,13 @@
 #define POST   2 
 #define DELETE 3
 
+#ifdef __AVR_ATmega2560__
+#define MAX_PAIRS 10
+#elif __AVR_ATmega1280__
+#define MAX_PAIRS 6
+#else
 #define MAX_PAIRS 4
+#endif
 
 class HTTPHeader {
 private:
